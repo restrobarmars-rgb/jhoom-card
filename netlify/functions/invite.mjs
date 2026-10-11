@@ -23252,7 +23252,7 @@ async function renderCard(name, ev) {
   return new Resvg2(svg, { fitTo: { mode: "width", value: 1200 } }).render().asPng();
 }
 function page(u2, id, ev, name) {
-  const dp = dateParts(ev.date), q = `n=${encodeURIComponent(name)}&e=${id}`, card = `${u2.origin}/card.png?${q}`;
+  const dp = dateParts(ev.date), q = `n=${encodeURIComponent(name)}&e=${id}`, card = `${u2.origin}/.netlify/functions/invite?t=card&${q}`;
   const title = ev.kind === "jhoom" ? `${name}, you are invited to Jhoom` : `${name}, you are invited to ${ev.title}`;
   const nice = ev.title + " " + ev.sub.toLowerCase().replace(/(^|\s)\S/g, (c2) => c2.toUpperCase());
   const desc = `${nice}. ${dp.wdl}, ${dp.day} ${dp.month}, ${ev.time}, ${ev.venue}. Free entry.`;
