@@ -1,0 +1,12 @@
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/i"
+  to = "/.netlify/functions/invite"
+  status = 200
+
+[[redirects]]
+  from = "/card.png"
+  to = "/.netlify/functions/invite?t=card"
+  status = 200
